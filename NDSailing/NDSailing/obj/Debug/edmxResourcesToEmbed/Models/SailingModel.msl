@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="sailSQLModelStoreContainer" CdmEntityContainer="sailSQLContext">
+    <EntitySetMapping Name="annualFeeStructures">
+      <EntityTypeMapping TypeName="sailSQLModel.annualFeeStructure">
+        <MappingFragment StoreEntitySet="annualFeeStructure">
+          <ScalarProperty Name="year" ColumnName="year" />
+          <ScalarProperty Name="annualFee" ColumnName="annualFee" />
+          <ScalarProperty Name="earlyDiscountedFee" ColumnName="earlyDiscountedFee" />
+          <ScalarProperty Name="earlyDiscountEndDate" ColumnName="earlyDiscountEndDate" />
+          <ScalarProperty Name="renewDeadlineDate" ColumnName="renewDeadlineDate" />
+          <ScalarProperty Name="taskExemptionFee" ColumnName="taskExemptionFee" />
+          <ScalarProperty Name="secondBoatFee" ColumnName="secondBoatFee" />
+          <ScalarProperty Name="thirdBoatFee" ColumnName="thirdBoatFee" />
+          <ScalarProperty Name="forthAndSubsequentBoatFee" ColumnName="forthAndSubsequentBoatFee" />
+          <ScalarProperty Name="nonSailFee" ColumnName="nonSailFee" />
+          <ScalarProperty Name="newMember25DiscountDate" ColumnName="newMember25DiscountDate" />
+          <ScalarProperty Name="newMember50DiscountDate" ColumnName="newMember50DiscountDate" />
+          <ScalarProperty Name="newMember75DiscountDate" ColumnName="newMember75DiscountDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="boats">
+      <EntityTypeMapping TypeName="sailSQLModel.boat">
+        <MappingFragment StoreEntitySet="boat">
+          <ScalarProperty Name="boatId" ColumnName="boatId" />
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+          <ScalarProperty Name="boatClass" ColumnName="boatClass" />
+          <ScalarProperty Name="hullColour" ColumnName="hullColour" />
+          <ScalarProperty Name="sailNumber" ColumnName="sailNumber" />
+          <ScalarProperty Name="hullLength" ColumnName="hullLength" />
+          <ScalarProperty Name="boatTypeId" ColumnName="boatTypeId" />
+          <ScalarProperty Name="parkingCode" ColumnName="parkingCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="boatTypes">
+      <EntityTypeMapping TypeName="sailSQLModel.boatType">
+        <MappingFragment StoreEntitySet="boatType">
+          <ScalarProperty Name="boatTypeId" ColumnName="boatTypeId" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="chargeable" ColumnName="chargeable" />
+          <ScalarProperty Name="sail" ColumnName="sail" />
+          <ScalarProperty Name="image" ColumnName="image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="countries">
+      <EntityTypeMapping TypeName="sailSQLModel.country">
+        <MappingFragment StoreEntitySet="country">
+          <ScalarProperty Name="countryCode" ColumnName="countryCode" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="postalPattern" ColumnName="postalPattern" />
+          <ScalarProperty Name="phonePattern" ColumnName="phonePattern" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="members">
+      <EntityTypeMapping TypeName="sailSQLModel.member">
+        <MappingFragment StoreEntitySet="member">
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+          <ScalarProperty Name="fullName" ColumnName="fullName" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="spouseFirstName" ColumnName="spouseFirstName" />
+          <ScalarProperty Name="spouseLastName" ColumnName="spouseLastName" />
+          <ScalarProperty Name="street" ColumnName="street" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="provinceCode" ColumnName="provinceCode" />
+          <ScalarProperty Name="postalCode" ColumnName="postalCode" />
+          <ScalarProperty Name="homePhone" ColumnName="homePhone" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="yearJoined" ColumnName="yearJoined" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+          <ScalarProperty Name="taskExempt" ColumnName="taskExempt" />
+          <ScalarProperty Name="useCanadaPost" ColumnName="useCanadaPost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="memberships">
+      <EntityTypeMapping TypeName="sailSQLModel.membership">
+        <MappingFragment StoreEntitySet="membership">
+          <ScalarProperty Name="membershipId" ColumnName="membershipId" />
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+          <ScalarProperty Name="year" ColumnName="year" />
+          <ScalarProperty Name="membershipTypeName" ColumnName="membershipTypeName" />
+          <ScalarProperty Name="fee" ColumnName="fee" />
+          <ScalarProperty Name="comments" ColumnName="comments" />
+          <ScalarProperty Name="paid" ColumnName="paid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="membershipTypes">
+      <EntityTypeMapping TypeName="sailSQLModel.membershipType">
+        <MappingFragment StoreEntitySet="membershipType">
+          <ScalarProperty Name="membershipTypeName" ColumnName="membershipTypeName" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="ratioToFull" ColumnName="ratioToFull" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="memberTasks">
+      <EntityTypeMapping TypeName="sailSQLModel.memberTask">
+        <MappingFragment StoreEntitySet="memberTask">
+          <ScalarProperty Name="memberTaskId" ColumnName="memberTaskId" />
+          <ScalarProperty Name="wednesdayDate" ColumnName="wednesdayDate" />
+          <ScalarProperty Name="taskId" ColumnName="taskId" />
+          <ScalarProperty Name="memberId" ColumnName="memberId" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="parkings">
+      <EntityTypeMapping TypeName="sailSQLModel.parking">
+        <MappingFragment StoreEntitySet="parking">
+          <ScalarProperty Name="parkingCode" ColumnName="parkingCode" />
+          <ScalarProperty Name="boatTypeId" ColumnName="boatTypeId" />
+          <ScalarProperty Name="actualBoatId" ColumnName="actualBoatId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="provinces">
+      <EntityTypeMapping TypeName="sailSQLModel.province">
+        <MappingFragment StoreEntitySet="province">
+          <ScalarProperty Name="provinceCode" ColumnName="provinceCode" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="countryCode" ColumnName="countryCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="surcharges">
+      <EntityTypeMapping TypeName="sailSQLModel.surcharge">
+        <MappingFragment StoreEntitySet="surcharge">
+          <ScalarProperty Name="surchargeId" ColumnName="surchargeId" />
+          <ScalarProperty Name="startYear" ColumnName="startYear" />
+          <ScalarProperty Name="endYear" ColumnName="endYear" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="sailSQLModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tasks">
+      <EntityTypeMapping TypeName="sailSQLModel.task">
+        <MappingFragment StoreEntitySet="task">
+          <ScalarProperty Name="taskId" ColumnName="taskId" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

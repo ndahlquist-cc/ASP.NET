@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="city" xml:space="preserve">
+    <value>Stad</value>
+  </data>
+  <data name="comment" xml:space="preserve">
+    <value>Commentaar</value>
+  </data>
+  <data name="email" xml:space="preserve">
+    <value>E -mail</value>
+  </data>
+  <data name="firstName" xml:space="preserve">
+    <value>Voornaam</value>
+  </data>
+  <data name="fullName" xml:space="preserve">
+    <value>Volledige Naam</value>
+  </data>
+  <data name="homePhone" xml:space="preserve">
+    <value>Telefoon Thuis</value>
+  </data>
+  <data name="lastName" xml:space="preserve">
+    <value>Familie Naam</value>
+  </data>
+  <data name="memberId" xml:space="preserve">
+    <value>Lid ID</value>
+  </data>
+  <data name="postalCode" xml:space="preserve">
+    <value>Postcode</value>
+  </data>
+  <data name="provinceCode" xml:space="preserve">
+    <value>Provincie</value>
+  </data>
+  <data name="Required" xml:space="preserve">
+    <value>{0} kan niet leeg of alleen spaties zijn</value>
+  </data>
+  <data name="spouseFirstName" xml:space="preserve">
+    <value>Echtgenoot Voornaam</value>
+  </data>
+  <data name="spouseLastName" xml:space="preserve">
+    <value>Partner 'wordt</value>
+  </data>
+  <data name="street" xml:space="preserve">
+    <value>Straat</value>
+  </data>
+  <data name="StringLengthMinMax" xml:space="preserve">
+    <value>{0} moet zijn van {1} tot {2} tekens lang zijn</value>
+  </data>
+  <data name="taskExempt" xml:space="preserve">
+    <value>Task Vrijgesteld</value>
+  </data>
+  <data name="useCanadaPost" xml:space="preserve">
+    <value>Gebruik de Post van Canada</value>
+  </data>
+  <data name="yearJoined" xml:space="preserve">
+    <value>Jaar Geregistreerd</value>
+  </data>
+  <data name="postalError" xml:space="preserve">
+    <value>{0} moet in het formaat A1A 1A1</value>
+  </data>
+  <data name="province" xml:space="preserve">
+    <value>Provincie</value>
+  </data>
+  <data name="creationSuccessful" xml:space="preserve">
+    <value>Creatie Succesvolle</value>
+  </data>
+  <data name="delete" xml:space="preserve">
+    <value>Verwijderen</value>
+  </data>
+  <data name="details" xml:space="preserve">
+    <value>Meer Informatie</value>
+  </data>
+  <data name="edit" xml:space="preserve">
+    <value>Uitgeven</value>
+  </data>
+  <data name="memberListing" xml:space="preserve">
+    <value>lis Listing</value>
+  </data>
+  <data name="about" xml:space="preserve">
+    <value>Over</value>
+  </data>
+  <data name="backToList" xml:space="preserve">
+    <value>Terug naar de lijst</value>
+  </data>
+  <data name="changeLanguage" xml:space="preserve">
+    <value>Taal wijzigen</value>
+  </data>
+  <data name="contact" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="create" xml:space="preserve">
+    <value>creëren nieuw</value>
+  </data>
+  <data name="createMember" xml:space="preserve">
+    <value>Maak Lid</value>
+  </data>
+  <data name="deleteSure" xml:space="preserve">
+    <value>Bent u zeker dat u dit wilt verwijderen ?</value>
+  </data>
+  <data name="downwind" xml:space="preserve">
+    <value>Benedenwinds Kleverigheid Zeilend Club</value>
+  </data>
+  <data name="editMember" xml:space="preserve">
+    <value>Bewerk Lid</value>
+  </data>
+  <data name="home" xml:space="preserve">
+    <value>Thuis</value>
+  </data>
+  <data name="languageIndex" xml:space="preserve">
+    <value>Talen Index</value>
+  </data>
+  <data name="languages" xml:space="preserve">
+    <value>Talen</value>
+  </data>
+  <data name="members" xml:space="preserve">
+    <value>Leden</value>
+  </data>
+  <data name="selectLanguage" xml:space="preserve">
+    <value>Taal Kiezen</value>
+  </data>
+  <data name="login" xml:space="preserve">
+    <value>Aanmelden</value>
+  </data>
+  <data name="register" xml:space="preserve">
+    <value>Registreren</value>
+  </data>
+  <data name="currentCulture" xml:space="preserve">
+    <value>Huidige Cultuur</value>
+  </data>
+  <data name="language" xml:space="preserve">
+    <value>Taal</value>
+  </data>
+  <data name="dbWritingError" xml:space="preserve">
+    <value>Fout bij het schrijven naar de databank</value>
+  </data>
+  <data name="deleteError" xml:space="preserve">
+    <value>Fout probeert te verwijderen</value>
+  </data>
+  <data name="deleteFail" xml:space="preserve">
+    <value>Verwijdering un - succesvolle</value>
+  </data>
+  <data name="deleteSuccess" xml:space="preserve">
+    <value>Verwijdering succesvol</value>
+  </data>
+  <data name="editSuccess" xml:space="preserve">
+    <value>Bewerken Succesvolle</value>
+  </data>
+  <data name="insertException" xml:space="preserve">
+    <value>Uitzondering op insert</value>
+  </data>
+  <data name="phoneError" xml:space="preserve">
+    <value>{0} moet overeenkomen met het telefoonnummer patroon 123-123-1234</value>
+  </data>
+  <data name="save" xml:space="preserve">
+    <value>Besparen</value>
+  </data>
+  <data name="submitQuery" xml:space="preserve">
+    <value>voorleggen
+Voorleggen Vraag</value>
+  </data>
+  <data name="emailFormat" xml:space="preserve">
+    <value>{0} moet vergelijkbaar formaat te zijn : N_dahlquist@live.ca</value>
+  </data>
+  <data name="integer" xml:space="preserve">
+    <value>{0} moet numeriek zijn.</value>
+  </data>
+  <data name="integerEmpty" xml:space="preserve">
+    <value>{0} moet numeriek zijn. {0} kan niet leeg zijn of alleen spaties .</value>
+  </data>
+  <data name="memberOnFile" xml:space="preserve">
+    <value>Lid met dit ID bestaat reeds.</value>
+  </data>
+  <data name="postalRequiredFormat" xml:space="preserve">
+    <value>{0} kan niet leeg zijn of alleen spaties. {0} moet 6-7 tekens lang zijn</value>
+  </data>
+  <data name="provinceInvalid" xml:space="preserve">
+    <value>Provincie code is niet in ons bestand</value>
+  </data>
+  <data name="provinceLength" xml:space="preserve">
+    <value>Provincie code moet 2 brieven lang zijn</value>
+  </data>
+  <data name="String" xml:space="preserve">
+    <value>{0} E-mail moet vergelijkbaar formaat te zijn : N_dahlquist@live.ca</value>
+  </data>
+  <data name="spouseFirstRequired" xml:space="preserve">
+    <value>{0} is vereist als {1} wordt ingevoerd.</value>
+  </data>
+</root>

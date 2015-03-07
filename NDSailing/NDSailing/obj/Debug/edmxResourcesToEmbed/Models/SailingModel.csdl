@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="sailSQLModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="annualFeeStructure">
+    <Key>
+      <PropertyRef Name="year" />
+    </Key>
+    <Property Name="year" Type="Int32" Nullable="false" />
+    <Property Name="annualFee" Type="Double" />
+    <Property Name="earlyDiscountedFee" Type="Double" />
+    <Property Name="earlyDiscountEndDate" Type="DateTime" Precision="3" />
+    <Property Name="renewDeadlineDate" Type="DateTime" Precision="3" />
+    <Property Name="taskExemptionFee" Type="Double" />
+    <Property Name="secondBoatFee" Type="Double" />
+    <Property Name="thirdBoatFee" Type="Double" />
+    <Property Name="forthAndSubsequentBoatFee" Type="Double" />
+    <Property Name="nonSailFee" Type="Double" />
+    <Property Name="newMember25DiscountDate" Type="DateTime" Precision="3" />
+    <Property Name="newMember50DiscountDate" Type="DateTime" Precision="3" />
+    <Property Name="newMember75DiscountDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="boat">
+    <Key>
+      <PropertyRef Name="boatId" />
+    </Key>
+    <Property Name="boatId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="memberId" Type="Int32" />
+    <Property Name="boatClass" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="hullColour" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="sailNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="hullLength" Type="Double" />
+    <Property Name="boatTypeId" Type="Int32" />
+    <Property Name="parkingCode" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="boatType" Relationship="Self.FK_boat_boatType" FromRole="boat" ToRole="boatType" />
+    <NavigationProperty Name="member" Relationship="Self.FK_boat_member" FromRole="boat" ToRole="member" />
+    <NavigationProperty Name="parking" Relationship="Self.FK_boat_parking" FromRole="boat" ToRole="parking" />
+  </EntityType>
+  <EntityType Name="boatType">
+    <Key>
+      <PropertyRef Name="boatTypeId" />
+    </Key>
+    <Property Name="boatTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="chargeable" Type="Boolean" Nullable="false" />
+    <Property Name="sail" Type="Boolean" Nullable="false" />
+    <Property Name="image" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="boats" Relationship="Self.FK_boat_boatType" FromRole="boatType" ToRole="boat" />
+    <NavigationProperty Name="parkings" Relationship="Self.FK_parking_boatType" FromRole="boatType" ToRole="parking" />
+  </EntityType>
+  <EntityType Name="country">
+    <Key>
+      <PropertyRef Name="countryCode" />
+    </Key>
+    <Property Name="countryCode" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="postalPattern" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="phonePattern" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="provinces" Relationship="Self.FK_province_country" FromRole="country" ToRole="province" />
+  </EntityType>
+  <EntityType Name="member">
+    <Key>
+      <PropertyRef Name="memberId" />
+    </Key>
+    <Property Name="memberId" Type="Int32" Nullable="false" />
+    <Property Name="fullName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="firstName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="lastName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="spouseFirstName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="spouseLastName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="street" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="city" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="provinceCode" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="postalCode" Type="String" MaxLength="7" FixedLength="true" Unicode="false" />
+    <Property Name="homePhone" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="yearJoined" Type="Int32" />
+    <Property Name="comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="taskExempt" Type="Boolean" />
+    <Property Name="useCanadaPost" Type="Boolean" />
+    <NavigationProperty Name="boats" Relationship="Self.FK_boat_member" FromRole="member" ToRole="boat" />
+    <NavigationProperty Name="province" Relationship="Self.FK_member_province" FromRole="member" ToRole="province" />
+    <NavigationProperty Name="memberships" Relationship="Self.FK_membership_member" FromRole="member" ToRole="membership" />
+    <NavigationProperty Name="memberTasks" Relationship="Self.FK_memberTask_member" FromRole="member" ToRole="memberTask" />
+  </EntityType>
+  <EntityType Name="membership">
+    <Key>
+      <PropertyRef Name="membershipId" />
+    </Key>
+    <Property Name="membershipId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="memberId" Type="Int32" Nullable="false" />
+    <Property Name="year" Type="Int32" Nullable="false" />
+    <Property Name="membershipTypeName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fee" Type="Single" Nullable="false" />
+    <Property Name="comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="paid" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="member" Relationship="Self.FK_membership_member" FromRole="membership" ToRole="member" />
+    <NavigationProperty Name="membershipType" Relationship="Self.FK_membership_membershipType" FromRole="membership" ToRole="membershipType" />
+  </EntityType>
+  <EntityType Name="membershipType">
+    <Key>
+      <PropertyRef Name="membershipTypeName" />
+    </Key>
+    <Property Name="membershipTypeName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ratioToFull" Type="Double" Nullable="false" />
+    <NavigationProperty Name="memberships" Relationship="Self.FK_membership_membershipType" FromRole="membershipType" ToRole="membership" />
+  </EntityType>
+  <EntityType Name="memberTask">
+    <Key>
+      <PropertyRef Name="memberTaskId" />
+    </Key>
+    <Property Name="memberTaskId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="wednesdayDate" Type="DateTime" Precision="3" />
+    <Property Name="taskId" Type="Int32" />
+    <Property Name="memberId" Type="Int32" />
+    <Property Name="comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="member" Relationship="Self.FK_memberTask_member" FromRole="memberTask" ToRole="member" />
+    <NavigationProperty Name="task" Relationship="Self.FK_memberTask_task" FromRole="memberTask" ToRole="task" />
+  </EntityType>
+  <EntityType Name="parking">
+    <Key>
+      <PropertyRef Name="parkingCode" />
+    </Key>
+    <Property Name="parkingCode" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="boatTypeId" Type="Int32" />
+    <Property Name="actualBoatId" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="boats" Relationship="Self.FK_boat_parking" FromRole="parking" ToRole="boat" />
+    <NavigationProperty Name="boatType" Relationship="Self.FK_parking_boatType" FromRole="parking" ToRole="boatType" />
+  </EntityType>
+  <EntityType Name="province">
+    <Key>
+      <PropertyRef Name="provinceCode" />
+    </Key>
+    <Property Name="provinceCode" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="countryCode" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="country" Relationship="Self.FK_province_country" FromRole="province" ToRole="country" />
+    <NavigationProperty Name="members" Relationship="Self.FK_member_province" FromRole="province" ToRole="member" />
+  </EntityType>
+  <EntityType Name="surcharge">
+    <Key>
+      <PropertyRef Name="surchargeId" />
+    </Key>
+    <Property Name="surchargeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="startYear" Type="Int32" />
+    <Property Name="endYear" Type="Int32" />
+    <Property Name="amount" Type="Double" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="task">
+    <Key>
+      <PropertyRef Name="taskId" />
+    </Key>
+    <Property Name="taskId" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="memberTasks" Relationship="Self.FK_memberTask_task" FromRole="task" ToRole="memberTask" />
+  </EntityType>
+  <Association Name="FK_boat_boatType">
+    <End Role="boatType" Type="Self.boatType" Multiplicity="0..1" />
+    <End Role="boat" Type="Self.boat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="boatType">
+        <PropertyRef Name="boatTypeId" />
+      </Principal>
+      <Dependent Role="boat">
+        <PropertyRef Name="boatTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_boat_member">
+    <End Role="member" Type="Self.member" Multiplicity="0..1" />
+    <End Role="boat" Type="Self.boat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="member">
+        <PropertyRef Name="memberId" />
+      </Principal>
+      <Dependent Role="boat">
+        <PropertyRef Name="memberId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_boat_parking">
+    <End Role="parking" Type="Self.parking" Multiplicity="0..1" />
+    <End Role="boat" Type="Self.boat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="parking">
+        <PropertyRef Name="parkingCode" />
+      </Principal>
+      <Dependent Role="boat">
+        <PropertyRef Name="parkingCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_parking_boatType">
+    <End Role="boatType" Type="Self.boatType" Multiplicity="0..1" />
+    <End Role="parking" Type="Self.parking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="boatType">
+        <PropertyRef Name="boatTypeId" />
+      </Principal>
+      <Dependent Role="parking">
+        <PropertyRef Name="boatTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_province_country">
+    <End Role="country" Type="Self.country" Multiplicity="0..1" />
+    <End Role="province" Type="Self.province" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="country">
+        <PropertyRef Name="countryCode" />
+      </Principal>
+      <Dependent Role="province">
+        <PropertyRef Name="countryCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_member_province">
+    <End Role="province" Type="Self.province" Multiplicity="0..1" />
+    <End Role="member" Type="Self.member" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="province">
+        <PropertyRef Name="provinceCode" />
+      </Principal>
+      <Dependent Role="member">
+        <PropertyRef Name="provinceCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_membership_member">
+    <End Role="member" Type="Self.member" Multiplicity="1" />
+    <End Role="membership" Type="Self.membership" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="member">
+        <PropertyRef Name="memberId" />
+      </Principal>
+      <Dependent Role="membership">
+        <PropertyRef Name="memberId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_memberTask_member">
+    <End Role="member" Type="Self.member" Multiplicity="0..1" />
+    <End Role="memberTask" Type="Self.memberTask" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="member">
+        <PropertyRef Name="memberId" />
+      </Principal>
+      <Dependent Role="memberTask">
+        <PropertyRef Name="memberId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_membership_membershipType">
+    <End Role="membershipType" Type="Self.membershipType" Multiplicity="1" />
+    <End Role="membership" Type="Self.membership" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="membershipType">
+        <PropertyRef Name="membershipTypeName" />
+      </Principal>
+      <Dependent Role="membership">
+        <PropertyRef Name="membershipTypeName" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_memberTask_task">
+    <End Role="task" Type="Self.task" Multiplicity="0..1" />
+    <End Role="memberTask" Type="Self.memberTask" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="task">
+        <PropertyRef Name="taskId" />
+      </Principal>
+      <Dependent Role="memberTask">
+        <PropertyRef Name="taskId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="sailSQLContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="annualFeeStructures" EntityType="Self.annualFeeStructure" />
+    <EntitySet Name="boats" EntityType="Self.boat" />
+    <EntitySet Name="boatTypes" EntityType="Self.boatType" />
+    <EntitySet Name="countries" EntityType="Self.country" />
+    <EntitySet Name="members" EntityType="Self.member" />
+    <EntitySet Name="memberships" EntityType="Self.membership" />
+    <EntitySet Name="membershipTypes" EntityType="Self.membershipType" />
+    <EntitySet Name="memberTasks" EntityType="Self.memberTask" />
+    <EntitySet Name="parkings" EntityType="Self.parking" />
+    <EntitySet Name="provinces" EntityType="Self.province" />
+    <EntitySet Name="surcharges" EntityType="Self.surcharge" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="tasks" EntityType="Self.task" />
+    <AssociationSet Name="FK_boat_boatType" Association="Self.FK_boat_boatType">
+      <End Role="boatType" EntitySet="boatTypes" />
+      <End Role="boat" EntitySet="boats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_boat_member" Association="Self.FK_boat_member">
+      <End Role="member" EntitySet="members" />
+      <End Role="boat" EntitySet="boats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_boat_parking" Association="Self.FK_boat_parking">
+      <End Role="parking" EntitySet="parkings" />
+      <End Role="boat" EntitySet="boats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_parking_boatType" Association="Self.FK_parking_boatType">
+      <End Role="boatType" EntitySet="boatTypes" />
+      <End Role="parking" EntitySet="parkings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_province_country" Association="Self.FK_province_country">
+      <End Role="country" EntitySet="countries" />
+      <End Role="province" EntitySet="provinces" />
+    </AssociationSet>
+    <AssociationSet Name="FK_member_province" Association="Self.FK_member_province">
+      <End Role="province" EntitySet="provinces" />
+      <End Role="member" EntitySet="members" />
+    </AssociationSet>
+    <AssociationSet Name="FK_membership_member" Association="Self.FK_membership_member">
+      <End Role="member" EntitySet="members" />
+      <End Role="membership" EntitySet="memberships" />
+    </AssociationSet>
+    <AssociationSet Name="FK_memberTask_member" Association="Self.FK_memberTask_member">
+      <End Role="member" EntitySet="members" />
+      <End Role="memberTask" EntitySet="memberTasks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_membership_membershipType" Association="Self.FK_membership_membershipType">
+      <End Role="membershipType" EntitySet="membershipTypes" />
+      <End Role="membership" EntitySet="memberships" />
+    </AssociationSet>
+    <AssociationSet Name="FK_memberTask_task" Association="Self.FK_memberTask_task">
+      <End Role="task" EntitySet="tasks" />
+      <End Role="memberTask" EntitySet="memberTasks" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

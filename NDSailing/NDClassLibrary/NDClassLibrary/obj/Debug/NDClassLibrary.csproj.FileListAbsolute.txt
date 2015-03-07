@@ -1,0 +1,8 @@
+C:\NDSailing\NDClassLibrary\NDClassLibrary\bin\Debug\NDClassLibrary.dll
+C:\NDSailing\NDClassLibrary\NDClassLibrary\bin\Debug\NDClassLibrary.pdb
+C:\NDSailing\NDClassLibrary\NDClassLibrary\obj\Debug\NDClassLibrary.dll
+C:\NDSailing\NDClassLibrary\NDClassLibrary\obj\Debug\NDClassLibrary.pdb
+G:\Semester 3\PROG2230\Assignments\Assignment4\NDSailing\NDClassLibrary\NDClassLibrary\bin\Debug\NDClassLibrary.dll
+G:\Semester 3\PROG2230\Assignments\Assignment4\NDSailing\NDClassLibrary\NDClassLibrary\bin\Debug\NDClassLibrary.pdb
+G:\Semester 3\PROG2230\Assignments\Assignment4\NDSailing\NDClassLibrary\NDClassLibrary\obj\Debug\NDClassLibrary.dll
+G:\Semester 3\PROG2230\Assignments\Assignment4\NDSailing\NDClassLibrary\NDClassLibrary\obj\Debug\NDClassLibrary.pdb

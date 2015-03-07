@@ -1,0 +1,64 @@
+﻿@model IEnumerable<NDSailing.Models.member>
+
+@{
+    ViewBag.Title = @Resources.NDTranslations.memberListing;
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink(@Resources.NDTranslations.create, "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.memberId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.homePhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.yearJoined)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.comment)
+        </th>
+        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <th>
+            @Html.DisplayFor(modelItem => item.memberId)
+        </th>
+        <td>
+            @Html.DisplayFor(modelItem => item.fullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.homePhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.yearJoined)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.comment)
+        </td>
+        <td>
+            @Html.ActionLink(@Resources.NDTranslations.edit, "Edit", new { id=item.memberId }) |
+            @Html.ActionLink(@Resources.NDTranslations.details, "Details", new { id = item.memberId }) |
+            @Html.ActionLink(@Resources.NDTranslations.delete, "Delete", new { id = item.memberId })
+        </td>
+    </tr>
+}
+
+</table>

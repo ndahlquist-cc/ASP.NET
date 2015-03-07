@@ -1,0 +1,143 @@
+﻿@model NDSailing.Models.member
+
+@{
+    ViewBag.Title = @Resources.NDTranslations.delete;
+}
+
+<h2>@ViewBag.Title</h2>
+
+<h3>@Resources.NDTranslations.deleteSure</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.fullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.firstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.firstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.spouseFirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.spouseFirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.spouseLastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.spouseLastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.street)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.street)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.city)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.city)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.postalCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.postalCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.homePhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.homePhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.yearJoined)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.yearJoined)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.comment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.comment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.taskExempt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.taskExempt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.useCanadaPost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.useCanadaPost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.province)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.province.name)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value=@Resources.NDTranslations.delete class="btn btn-default" /> |
+            @Html.ActionLink(@Resources.NDTranslations.backToList, "Index")
+        </div>
+    }
+</div>

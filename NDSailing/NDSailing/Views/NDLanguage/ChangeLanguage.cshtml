@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = @Resources.NDTranslations.changeLanguage;
+}
+
+<h2>@ViewBag.Title</h2>
+@using (Html.BeginForm())
+{
+    <h2>
+        @Resources.NDTranslations.currentCulture: @System.Threading.Thread.CurrentThread.CurrentCulture, 
+        @Resources.NDTranslations.language: @System.Threading.Thread.CurrentThread.CurrentUICulture
+    </h2>
+    @Html.DropDownList("language", ViewBag.Languages as SelectList)
+
+    <input type="submit" value=@Resources.NDTranslations.submitQuery />
+
+}

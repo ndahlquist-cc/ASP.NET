@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="city" xml:space="preserve">
+    <value>Kaupunki</value>
+  </data>
+  <data name="comment" xml:space="preserve">
+    <value>Kommentti</value>
+  </data>
+  <data name="email" xml:space="preserve">
+    <value>E - Mail</value>
+  </data>
+  <data name="firstName" xml:space="preserve">
+    <value>Etunimi</value>
+  </data>
+  <data name="fullName" xml:space="preserve">
+    <value>Koko nimi</value>
+  </data>
+  <data name="homePhone" xml:space="preserve">
+    <value>Kotipuhelin</value>
+  </data>
+  <data name="lastName" xml:space="preserve">
+    <value>Sukunimi</value>
+  </data>
+  <data name="memberId" xml:space="preserve">
+    <value>Jäsen tunnus</value>
+  </data>
+  <data name="postalCode" xml:space="preserve">
+    <value>Postinumero</value>
+  </data>
+  <data name="provinceCode" xml:space="preserve">
+    <value>Maakunta</value>
+  </data>
+  <data name="Required" xml:space="preserve">
+    <value>{0} ei voi olla tyhjä tai vain aihioita</value>
+  </data>
+  <data name="spouseFirstName" xml:space="preserve">
+    <value>Puolison etunimi</value>
+  </data>
+  <data name="spouseLastName" xml:space="preserve">
+    <value>Puolison sukunimi</value>
+  </data>
+  <data name="street" xml:space="preserve">
+    <value>Katu</value>
+  </data>
+  <data name="StringLengthMinMax" xml:space="preserve">
+    <value>{0} täytyy olla {1} ja {2} merkkiä pitkä</value>
+  </data>
+  <data name="taskExempt" xml:space="preserve">
+    <value>Tehtävä Vapautettu</value>
+  </data>
+  <data name="useCanadaPost" xml:space="preserve">
+    <value>Käytä Kanada Virka</value>
+  </data>
+  <data name="yearJoined" xml:space="preserve">
+    <value>Vuosi Liittyi</value>
+  </data>
+  <data name="postalError" xml:space="preserve">
+    <value>{0} on oltavamuodossa A1A 1A1</value>
+  </data>
+  <data name="province" xml:space="preserve">
+    <value>Maakunta</value>
+  </data>
+  <data name="creationSuccessful" xml:space="preserve">
+    <value>Luominen Onnistunut</value>
+  </data>
+  <data name="delete" xml:space="preserve">
+    <value>Poistaa</value>
+  </data>
+  <data name="details" xml:space="preserve">
+    <value>Tarkemmat Tiedot</value>
+  </data>
+  <data name="edit" xml:space="preserve">
+    <value>Muokata</value>
+  </data>
+  <data name="memberListing" xml:space="preserve">
+    <value>Listaus</value>
+  </data>
+  <data name="about" xml:space="preserve">
+    <value>Noin</value>
+  </data>
+  <data name="backToList" xml:space="preserve">
+    <value>Takaisin Luetteloon</value>
+  </data>
+  <data name="changeLanguage" xml:space="preserve">
+    <value>Vaihda Kieli</value>
+  </data>
+  <data name="contact" xml:space="preserve">
+    <value>Yhteyshenkilö</value>
+  </data>
+  <data name="create" xml:space="preserve">
+    <value>Luoda Uusia</value>
+  </data>
+  <data name="createMember" xml:space="preserve">
+    <value>Luo Jäsen</value>
+  </data>
+  <data name="deleteSure" xml:space="preserve">
+    <value>Oletko varma, että haluat poistaa tämän ?</value>
+  </data>
+  <data name="downwind" xml:space="preserve">
+    <value>Myötätuuleen Nasta Purjehdus Klubi</value>
+  </data>
+  <data name="editMember" xml:space="preserve">
+    <value>Muokkaa Jäsen</value>
+  </data>
+  <data name="home" xml:space="preserve">
+    <value>Koti</value>
+  </data>
+  <data name="languageIndex" xml:space="preserve">
+    <value>Kielet Hakemisto</value>
+  </data>
+  <data name="languages" xml:space="preserve">
+    <value>Kielet</value>
+  </data>
+  <data name="members" xml:space="preserve">
+    <value>Jäsenet</value>
+  </data>
+  <data name="selectLanguage" xml:space="preserve">
+    <value>Valittu Kieli</value>
+  </data>
+  <data name="login" xml:space="preserve">
+    <value>Kirjaudu Sisään</value>
+  </data>
+  <data name="register" xml:space="preserve">
+    <value>Rrekisteröidä</value>
+  </data>
+  <data name="currentCulture" xml:space="preserve">
+    <value>Nykyinen Kulttuuri</value>
+  </data>
+  <data name="language" xml:space="preserve">
+    <value>Kieli</value>
+  </data>
+  <data name="dbWritingError" xml:space="preserve">
+    <value>Virhe kirjoitettaessa tietokantaan
+tietokanta</value>
+  </data>
+  <data name="deleteError" xml:space="preserve">
+    <value>Virhe yrittää poistaa</value>
+  </data>
+  <data name="deleteFail" xml:space="preserve">
+    <value>Poistetaan un - onnistunut</value>
+  </data>
+  <data name="deleteSuccess" xml:space="preserve">
+    <value>Poisto onnistunut</value>
+  </data>
+  <data name="editSuccess" xml:space="preserve">
+    <value>Muokkaa Onnistunut</value>
+  </data>
+  <data name="insertException" xml:space="preserve">
+    <value>Poikkeus limityskohdista</value>
+  </data>
+  <data name="phoneError" xml:space="preserve">
+    <value>{0} pitäisi vastatapuhelinnumero kuvio 123-123-1234</value>
+  </data>
+  <data name="save" xml:space="preserve">
+    <value>Pelastaa</value>
+  </data>
+  <data name="submitQuery" xml:space="preserve">
+    <value>Esittää Tiedustelu</value>
+  </data>
+  <data name="emailFormat" xml:space="preserve">
+    <value>{0} on samanlainen formaatti : N_dahlquist@live.ca</value>
+  </data>
+  <data name="integer" xml:space="preserve">
+    <value>{0} täytyy olla numeerinen.</value>
+  </data>
+  <data name="integerEmpty" xml:space="preserve">
+    <value>{0} täytyy olla numeerinen. {0} ei voi olla tyhjä tai vain aihioita .</value>
+  </data>
+  <data name="memberOnFile" xml:space="preserve">
+    <value>Jäsen tällä tunnus on jo olemassa.</value>
+  </data>
+  <data name="postalRequiredFormat" xml:space="preserve">
+    <value>{0} ei voi olla tyhjä tai vain aihioita. {0} on oltava 6-7 merkkiä pitkä</value>
+  </data>
+  <data name="provinceInvalid" xml:space="preserve">
+    <value>Maakunta -koodi ei ole tallessa</value>
+  </data>
+  <data name="provinceLength" xml:space="preserve">
+    <value>Maakunta -koodi on 2 kirjainta pituudeltaan</value>
+  </data>
+  <data name="spouseFirstRequired" xml:space="preserve">
+    <value>{0} on tarpeen, jos {1} on tullut.</value>
+  </data>
+</root>
